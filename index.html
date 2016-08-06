@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<style>
+#new {
+	margin: 0;
+	padding: 0px;
+height:2em;
+ }
+#new li 
+{
+list-style: none;
+float:left;
+}
+#new li a {
+	display: block;
+	padding: 3px 12px;
+	background-color: #FC9;
+	color:#060;
+font-family:"verdana";
+font-size:20px;
+	text-decoration: none;
+;}
+#new li ul {
+	display: none; 
+width: 10em;
+ /* Width to help Opera out */
+	background-color: #FFC;
+}
+#new li:hover ul {
+	display: block;
+	position: absolute;
+	margin: 0;
+	padding:0px;
+      color:#060;
+background-color: #FC9;
+
+ }
+#new li:hover li {
+float: none;
+        background-color: #060;
+ }
+#new li:hover li a {
+	border-bottom: 1px solid #fff;
+	color: #060;
+        text-decoration:none; 
+}
+#new li li a:hover {
+	background-color: #CC0;
+text-decoration:none; 
+ }
+</style>
+<meta charset="utf-8">
+<title> Southern Spice </title>
+<link href="main.css" rel="stylesheet" type="text/css">
+<link href="favicon2.ico" rel="icon" type="image/x-icon" />
+</head>
+<body onLoad="runSlideShow()">
+<div id="content">
+<div id="search">
+<form method="get" action="http://www.google.com">
+<table>
+<tr>
+<td style="border-style:none;">
+<div style="background: url(roundbox.gif) no-repeat left top; padding: 0px; height: 25px;">
+<input type="text" name="zoom_query" style="border: none; background-color: transparent; width: 106px; padding-left: 5px; padding-right: 5px;">
+</div>
+</td>
+<td style="border-style:none;"> 
+<input type="submit" value="" style="border-style: none; background: url('searchbutton1.gif') no-repeat; width: 24px; height: 25px;">
+</td>
+</tr>
+</table>
+</form>
+</div>
+<img src="website banner.fw.png" alt="Southern Spice">
+<ul id="new">
+        <li><a href="#">Home</a></li>
+        <li>
+                <a href="quickmenu.html">Quick Menu</a>
+<ul>
+<li><a href="lettuce.html"> Lettuce Salad </a></li>
+<li><a href="aloochaat.html"> Aloo Chaat </a></li>
+<li><a href="pasta2.html"> Pasta </a></li>
+<li><a href="frenchtoast.html"> French Toast </a></li>
+<li><a href="anda.html"> Anda Bhurji </a></li>
+</ul>
+</li>
+        <li>
+            <a href="veg.html">Vegetarian</a>
+            <ul>
+		<li><a href="aloomatar.html">Aloo Matar</a></li>
+                <li><a href="paneertikka.html">Paneer Tikka</a></li>
+                <li><a href="roastedpotato.html">Roasted Potatoes</a></li>
+                <li><a href="vegfriedrice.html">Vegetable Fried Rice</a></li>
+		<li><a href="chole.html">Chole</a></li>	
+		</ul>
+        </li>
+<li>
+            <a href="NonVeg.html">Non-Vegetarian</a>
+            <ul>
+		<li><a href="chickentikka.html">Chicken Tikka</a></li>
+                <li><a href="butterchicken.html">Butter Chicken</a></li>
+                <li><a href="fishcurry.html">Fish Curry</a></li>
+                <li><a href="fishfry.html">Fish Fry</a></li>
+		<li><a href="pepperchicken.html">Pepper Chicken </a></li>	
+		</ul>
+        </li>
+<li>
+            <a href="Desserts.html">Desserts</a>
+            <ul>
+		<li><a href="gulabjamun.html">Gulab Jamun</a></li>
+                <li><a href="double.html">Double Ka Meetha</a></li>
+                <li><a href="gajar.html">Gajar Ka Halwa</a></li>
+                <li><a href="banana.html">Banana Pie</a></li>
+		<li><a href="ricekheer.html">Rice Kheer</a></li>	
+		</ul>
+        </li>
+        <li><a href="Contact.html">Contact Us</a></li>
+    </ul>
+<table>
+  <tr>
+	<td width="50%" align="center">
+	  <img src="slideshow1.jpg" name='SlideShow' alt="Southern Spice">
+	  <script>
+			var slideShowSpeed = 4000
+			var Pic = new Array()
+			    Pic[0] = 'slideshow1.jpg'
+			    Pic[1] = 'slideshow2.jpg'
+			    Pic[2] = 'slideshow3.jpg'
+			    Pic[3] = 'slideshow4.jpg'
+			    Pic[4] = 'slideshow5.jpg'
+			var t
+			var j = 0
+			var p = Pic.length
+			var preLoad = new Array()
+			for (i = 0; i < p; i++)
+			{
+	    			preLoad[i] = new Image()
+	    			preLoad[i].src = Pic[i]
+	    	}
+			function runSlideShow(){
+				if (document.all){
+	    				document.images.SlideShow.style.filter="blendTrans(duration=2)"
+	    				document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)"
+	    				document.images.SlideShow.filters.blendTrans.Apply()
+				}
+				document.images.SlideShow.src = preLoad[j].src
+				if (document.all){
+	    				document.images.SlideShow.filters.blendTrans.Play()
+				}
+				j = j + 1
+				if (j >(p-1)) j=0
+					t = setTimeout('runSlideShow()', slideShowSpeed)
+			}
+			</script>
+
+<div id="section">
+<h3> A LITTLE ABOUT US </h3>
+Here at southern spice we try to provide you with <br>traditional indian recipes that will tingle your taste buds !<br>
+ We strive to give you the recipes that can help you with <br>your day to day cooking as well as help you cook for big events.<br>
+  At southern spice we promise to help you become an extra ordinary cook ! <br>
+We know that you are taking too many efforts to get that <br>one dish right and we know how to get you there. <br>
+<br>Follow this site for regular updates on recipes and the most popular recipes.<br></p>
+</div>
+<hr>
+<div id="footer">
+<footer><center>&copy; 2014 Southern Spice. All Rights Reserved.</center></footer>
+</div>
+</div>
+</body>
+</html>
